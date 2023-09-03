@@ -1,0 +1,312 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+button {
+    font-size: inherit;
+}
+
+input {
+    font-size: inherit;
+}
+
+/* General styles */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1em;
+    background-color: #35363a;
+    /* background-image: linear-gradient(to right bottom,#64e6ca, #9198e5); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+
+    color: white;
+    padding: 0 0.5em;
+}
+
+button {
+    transition: all 0.1s ease-in;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+input[type='text'] {
+    transition: all 0.3s ease-in;
+}
+
+/* Root Section */
+#root-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7em;
+    height: 4em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: #333;
+    background-image: linear-gradient(to right bottom,#64e6ca, #9198e5);
+    padding: 0.3em 0.4em;
+    transition: all 0.3s ease-in;
+    border: none;
+    border-radius: 32px;
+    border: 4px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+#root-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Search Section */
+
+#search-container {
+    position: sticky;
+    top: 0.02vh;
+    margin-top: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.25em;
+}
+
+#search-input {
+    border: none;
+    border-radius: 32px;
+    padding: 0.8em 0.5em;
+    transition: all 0.3s ease-in;
+}
+
+#search-input::placeholder {
+    color: #333;
+    opacity: 0.8;
+}
+
+#search-button {
+    background-color: white;
+    border: none;
+    border-radius: 32px;
+    padding: 0.5em;
+}
+
+/* Main Information Section */
+
+#main-information-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: -1em;
+    text-align: center;
+}
+
+/* #weather-img {
+    margin-top: -1.5em;
+} */
+
+#country-name {
+    margin-top: -0.5em;
+}
+
+#weather-text {
+    text-transform: capitalize;
+    margin-top: -0.5em;
+}
+
+#temperature {
+    margin-top: -0.5em;
+}
+
+/* Wind and Humidity Section */
+
+#wind-humidity {
+    margin-top: 0.5em;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+#wind-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+}
+
+#humidity-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 300px) {
+    html {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    #search-container {
+        margin-top: -0.1em;
+    }
+
+
+    /* #search-input {
+        padding: 0.8em;
+    } */
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 1.2rem;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* #search-container {
+        margin-top: -0.05em;
+    } */
+
+    #search-button {
+        padding: 0.5em;
+    }
+
+    #main-information-container {
+        margin-top: -0.75em;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    html {
+        font-size: 1.4rem;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    #root-container {
+        border-radius: 64px;
+    }
+
+    #search-container {
+        margin-top: 0.1em;
+    }
+
+    #search-button {
+        padding: 0.6em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* #root-container {
+        justify-content: space-around;
+    } */
+
+    #search-container {
+        margin-top: 0.1em;
+    }
+
+    #search-button {
+        padding: 0.8em;
+        border-radius: 64px;
+    }
+
+    #search-input {
+        border-radius: 64px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 2rem;
+    }
+
+    #search-container {
+        margin-top: 0.2em;
+    }
+
+    .icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    #search-input {
+        border-radius: 64px;
+    }
+
+    #search-container {
+        margin-top: 0.1em;
+    }
+    
+    #search-button {
+        border-radius: 64px;
+        padding: 0.9em;
+    }
+}

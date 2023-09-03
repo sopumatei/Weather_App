@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+
+        <div id="root-container">
+            <div id="search-container">
+                <input placeholder="Search" id="search-input" type="text">
+                <button id="search-button">
+                    <img src="./img/search_icon.png" alt="search-icon" width="36px" height="36px">
+                </button>
+            </div>
+    
+            <div id="main-information-container">
+                <img id="weather-img" alt="weather-icon" width="128px" height="128px">
+                <h1 id="temperature">--</h1>
+                <h3 id="weather-text">Blank</h3>
+                <h2 id="city-name">City</h2>
+                <h4 id="country-name">Country</h4>
+            </div>
+    
+            <div id="wind-humidity">
+                <div id="wind-container">
+                    <img class="icon" src="./img/wind.png" alt="wind icon" width="64px" height="64px">
+                    <h4 id="wind-speed">0Km/H</h3>
+                </div>
+        
+                <div id="humidity-container">
+                    <img class="icon" src="./img/humidity.png" alt="humidity icon" width="64px" height="64px">
+                    <h4 id="humidity">0%</h3>
+                </div>
+            </div>
+        </div>
+        
+        <script src="./config.js" type="module"></script>
+        <script src="./script.js" type="module"></script>
+    </body>
+</html>
